@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Gently Explained Real Analysis Series — E. J. Sterling</title>
+    
+    <!-- Fast KaTeX CSS for LaTeX Math Rendering -->
+    <link rel="stylesheet" href="https://jsdelivr.net">
+    <script defer src="https://jsdelivr.net"></script>
+    <script defer src="https://jsdelivr.net"
+        onload="renderMathInElement(document.body);"></script>
+
+    <style>
+        :root {
+            --brand-blue: #1A365D;
+            --brand-teal: #007791;
+            --brand-crimson: #8B0000;
+            --text-dark: #2D3748;
+            --bg-light: #F7FAFC;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: var(--text-dark);
+            background-color: #FFFFFF;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--brand-blue);
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin: 1rem 0 0 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: var(--bg-light);
+            border-top: 5px solid var(--brand-blue);
+            padding: 1.5rem;
+            border-radius: 4px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .card.fundamental { border-top-color: var(--brand-teal); }
+        .card.intermediate { border-top-color: var(--brand-blue); }
+        .card.hardest { border-top-color: var(--brand-crimson); }
+
+        .card h3 {
+            margin-top: 0;
+            font-size: 1.3rem;
+        }
+
+        .framework-section {
+            background: #FFFFFF;
+            border-left: 4px solid var(--brand-blue);
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .framework-title {
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.25rem;
+        }
+
+        .wall { border-left-color: #CBD5E0; color: #4A5568; }
+        .intuition { border-left-color: var(--brand-teal); }
+        .breakdown { border-left-color: var(--brand-blue); }
+        .shortcut { border-left-color: var(--brand-crimson); background-color: #FFF5F5; }
+
+        .cta-box {
+            background-color: var(--bg-light);
+            border: 1px solid #E2E8F0;
+            padding: 2.5rem;
+            text-align: center;
+            border-radius: 6px;
+            margin-top: 4rem;
+        }
+
+        .btn {
+            background-color: var(--brand-blue);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 1rem;
+            transition: background 0.2s;
+        }
+
+        .btn:hover { background-color: #0F2340; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Real Analysis, Gently Explained</h1>
+        <p>A Complete 3-Volume Mastery Framework by E. J. Sterling</p>
+    </header>
+
+    <div class="container">
+        <h2>About the Series</h2>
+        <p>Most students struggle with analysis because standard textbooks jump straight to formal definitions, hiding the intuitive pictures that make them clear. This series reverses that trend, parsing the 303 most critical bottlenecks into clear architectural steps.</p>
+
+        <div class="grid-3">
+            <div class="card fundamental">
+                <h3>Vol 1: Fundamentals</h3>
+                <p><strong>Target:</strong> Day-one preparation.</p>
+                <p>Bridges calculation conventions with logic frameworks. Covers quantifiers \(\forall, \exists\) boundaries, field axioms, and foundational intervals.</p>
+            </div>
+            <div class="card intermediate">
+                <h3>Vol 2: Intermediate</h3>
+                <p><strong>Target:</strong> Multi-variable transition.</p>
+                <p>Exposes multi-dimensional mapping traps, metric variations, metric shapes, point groupings, and functional sequences.</p>
+            </div>
+            <div class="card hardest">
+                <h3>Vol 3: Hardest Concepts</h3>
+                <p><strong>Target:</strong> Advanced mastery.</p>
+                <p>Unpacks metric space completeness, structural Lebesgue integration, \(L^p\) topologies, and functional analysis extensions.</p>
+            </div>
+        </div>
+
+        <h2 style="margin-top: 4rem;">The 4-Step Rhythm Example</h2>
+        <p>Every concept in the series follows an identical logical rhythm so your brain builds familiarity across the syllabus:</p>
+
+        <div class="framework-section wall">
+            <div class="framework-title">Step 1 — The Wall</div>
+            The foundational definition of the supremum \(\sup A\) sounds like a complex legal clause. Why must we assume its existence, and what collapses without it?
+        </div>
+
+        <div class="framework-section intuition">
+            <div class="framework-title">Step 2 — The Intuition</div>
+            Picture the number line as a ruler. The fractions are packed densely but leave microscopic gaps where irrationals like \(\sqrt{2}\) belong. The completeness axiom states that there are no holes; if numbers creep toward a ceiling, they must stop at an exact coordinate point.
+        </div>
+
+        <div class="framework-section breakdown">
+            <div class="framework-title">Step 3 — The Breakdown</div>
+            Let \(A \subset \mathbb{R}\) be a nonempty set bounded above. The supremum \(\sup A\) is characterized strictly by two tracking rules:
+            <div style="margin-top: 0.5rem;">1. \(a \le \sup A\) for all \(a \in A\)</div>
+            <div>2. If \(M < \sup A\), then some \(a \in A\) satisfies \(a > M\)</div>
+        </div>
+
+        <div class="framework-section shortcut">
+            <div class="framework-title">Step 4 — The Shortcut</div>
+            <strong>Key Memory Hook:</strong> Real numbers fill every structural gap that rational fractions leave behind.
+        </div>
+
+        <div class="cta-box">
+            <h3>Request an Evaluation Copy</h3>
+            <p>Are you a university professor, lecturer, or course coordinator looking to lower your module's DFW rate? Access print-on-demand sample chapters for your syllabus review completely for free.</p>
+            <!-- Replace the href string with your real contact or form link later -->
+            <a href="mailto:your-email@://domain.com Copy Request" class="btn">Email for Review Access</a>
+        </div>
+    </div>
+
+</body>
+</html>
