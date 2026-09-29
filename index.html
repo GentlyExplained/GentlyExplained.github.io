@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+html<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Gently Explained Real Analysis Series — E. J. Sterling</title>
+    <title>The Gently Explained Textbook Series — Academic Catalog</title>
     
     <!-- Fast KaTeX CSS for LaTeX Math Rendering -->
     <link rel="stylesheet" href="https://jsdelivr.net">
@@ -21,7 +21,7 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             color: var(--text-dark);
             background-color: #FFFFFF;
             line-height: 1.6;
@@ -36,154 +36,227 @@
             padding: 4rem 2rem;
         }
 
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-            font-weight: 700;
-        }
-
-        header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            margin: 1rem 0 0 0;
-        }
+        header h1 { margin: 0; font-size: 2.5rem; font-weight: 700; }
+        header p { font-size: 1.2rem; opacity: 0.9; margin: 1rem 0 0 0; }
 
         .container {
-            max-width: 900px;
+            max-width: 1100px;
             margin: 0 auto;
             padding: 3rem 2rem;
         }
 
-        .grid-3 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .card {
+        /* Filter Controls Styling */
+        .filter-section {
+            text-align: center;
+            margin-bottom: 3rem;
             background: var(--bg-light);
-            border-top: 5px solid var(--brand-blue);
             padding: 1.5rem;
-            border-radius: 4px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
-
-        .card.fundamental { border-top-color: var(--brand-teal); }
-        .card.intermediate { border-top-color: var(--brand-blue); }
-        .card.hardest { border-top-color: var(--brand-crimson); }
-
-        .card h3 {
-            margin-top: 0;
-            font-size: 1.3rem;
-        }
-
-        .framework-section {
-            background: #FFFFFF;
-            border-left: 4px solid var(--brand-blue);
-            padding: 1rem 1.5rem;
-            margin: 1.5rem 0;
-            border-radius: 0 4px 4px 0;
-        }
-
-        .framework-title {
-            font-weight: bold;
-            text-transform: uppercase;
-            font-size: 0.85rem;
-            letter-spacing: 0.05em;
-            margin-bottom: 0.25rem;
-        }
-
-        .wall { border-left-color: #CBD5E0; color: #4A5568; }
-        .intuition { border-left-color: var(--brand-teal); }
-        .breakdown { border-left-color: var(--brand-blue); }
-        .shortcut { border-left-color: var(--brand-crimson); background-color: #FFF5F5; }
-
-        .cta-box {
-            background-color: var(--bg-light);
+            border-radius: 6px;
             border: 1px solid #E2E8F0;
+        }
+
+        .filter-btn {
+            background-color: #FFFFFF;
+            color: var(--brand-blue);
+            border: 2px solid var(--brand-blue);
+            padding: 0.5rem 1.5rem;
+            margin: 0.25rem;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.2s;
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background-color: var(--brand-blue);
+            color: white;
+        }
+
+        /* Catalog Layout */
+        .catalog-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+        }
+
+        .book-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            background: #FFFFFF;
+            border: 1px solid #E2E8F0;
+            padding: 2rem;
+            border-radius: 6px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            transition: transform 0.2s;
+        }
+
+        .book-row:hover { transform: translateY(-2px); }
+
+        .book-details h3 {
+            margin-top: 0;
+            font-size: 1.6rem;
+            color: var(--brand-blue);
+        }
+
+        .tag {
+            display: inline-block;
+            background-color: #E2E8F0;
+            color: var(--text-dark);
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        /* Buying Channels Blocks */
+        .purchase-matrix {
+            background: var(--bg-light);
+            padding: 1.5rem;
+            border-radius: 6px;
+            border-left: 4px solid var(--brand-teal);
+        }
+
+        .matrix-title {
+            font-weight: bold;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+            color: var(--brand-blue);
+        }
+
+        .btn-link {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #FFFFFF;
+            border: 1px solid #CBD5E0;
+            padding: 0.75rem 1rem;
+            margin-bottom: 0.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: background 0.2s;
+        }
+
+        .btn-link:hover { background: #EDF2F7; border-color: #A0AEC0; }
+        .btn-link span.price { color: var(--brand-teal); font-weight: bold; }
+
+        .professor-panel {
+            background-color: var(--bg-light);
+            border: 1px dashed var(--brand-blue);
             padding: 2.5rem;
             text-align: center;
             border-radius: 6px;
-            margin-top: 4rem;
+            margin-top: 5rem;
         }
 
-        .btn {
+        .btn-main {
             background-color: var(--brand-blue);
             color: white;
-            padding: 0.75rem 1.5rem;
+            padding: 0.85rem 2rem;
             text-decoration: none;
             border-radius: 4px;
             font-weight: bold;
             display: inline-block;
             margin-top: 1rem;
-            transition: background 0.2s;
         }
-
-        .btn:hover { background-color: #0F2340; }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Real Analysis, Gently Explained</h1>
-        <p>A Complete 3-Volume Mastery Framework by E. J. Sterling</p>
+        <h1>The Gently Explained Library</h1>
+        <p>Intuitive, Scaffolded Textbooks for Modern University Curricula</p>
     </header>
 
     <div class="container">
-        <h2>About the Series</h2>
-        <p>Most students struggle with analysis because standard textbooks jump straight to formal definitions, hiding the intuitive pictures that make them clear. This series reverses that trend, parsing the 303 most critical bottlenecks into clear architectural steps.</p>
+        
+        <!-- Interactive Subject Filter Section -->
+        <div class="filter-section">
+            <div style="font-weight: bold; margin-bottom: 0.5rem; color: var(--brand-blue);">Filter Catalog by Discipline:</div>
+            <button class="filter-btn active" onclick="filterCatalog('all')">View All Subjects</button>
+            <button class="filter-btn" onclick="filterCatalog('math')">Higher Mathematics</button>
+            <button class="filter-btn" onclick="filterCatalog('physics')">Mathematical Physics</button>
+        </div>
 
-        <div class="grid-3">
-            <div class="card fundamental">
-                <h3>Vol 1: Fundamentals</h3>
-                <p><strong>Target:</strong> Day-one preparation.</p>
-                <p>Bridges calculation conventions with logic frameworks. Covers quantifiers \(\forall, \exists\) boundaries, field axioms, and foundational intervals.</p>
+        <!-- Master Catalog Container -->
+        <div class="catalog-grid" id="catalog">
+            
+            <!-- Book Entry 1: Real Analysis Series -->
+            <div class="book-row" data-discipline="math">
+                <div class="book-details">
+                    <span class="tag">Higher Mathematics</span>
+                    <h3>Real Analysis (3-Volume Set)</h3>
+                    <p><strong>Volumes:</strong> <em>Fundamentals, Intermediate, and Hardest Concepts</em></p>
+                    <p>A pristine, modular framework that untangles dense coordinate mappings, sequence accumulation metrics, and Lebesgue measure spaces using intuitive geometric structures.</p>
+                    <div style="background: #FFF5F5; padding: 0.75rem; border-left: 3px solid var(--brand-crimson); font-size: 0.9rem; border-radius: 0 4px 4px 0;">
+                        <strong>Sample Solution Metric:</strong> \(\sup A \implies a \le \sup A\)
+                    </div>
+                </div>
+                <div class="purchase-matrix">
+                    <div class="matrix-title">Secure Demand-Based Channels</div>
+                    
+                    <a href="https://amazon.com" target="_blank" class="btn-link">
+                        <span>📘 Softcover Print-on-Demand (Vol 1)</span>
+                        <span class="price">$39.99</span>
+                    </a>
+                    <a href="https://amazon.com" target="_blank" class="btn-link">
+                        <span>📙 Hardcover Desk Reference (Vol 1)</span>
+                        <span class="price">$49.99</span>
+                    </a>
+                    <a href="https://amazon.com" target="_blank" class="btn-link">
+                        <span>📱 Secure DRM Kindle Edition</span>
+                        <span class="price">$9.99</span>
+                    </a>
+                </div>
             </div>
-            <div class="card intermediate">
-                <h3>Vol 2: Intermediate</h3>
-                <p><strong>Target:</strong> Multi-variable transition.</p>
-                <p>Exposes multi-dimensional mapping traps, metric variations, metric shapes, point groupings, and functional sequences.</p>
+
+            <!-- Book Entry 2: Future Placeholder (e.g. Abstract Algebra) -->
+            <div class="book-row" data-discipline="math">
+                <div class="book-details">
+                    <span class="tag">Higher Mathematics</span>
+                    <h3>Abstract Algebra (Forthcoming)</h3>
+                    <p>Breaking down groups, continuous rings, fields, and homological mappings without losing sight of the underlying symmetries.</p>
+                </div>
+                <div class="purchase-matrix" style="opacity: 0.6; pointer-events: none;">
+                    <div class="matrix-title">Status Matrix</div>
+                    <div style="text-align: center; padding: 1.5rem; font-style: italic;">Production Pipeline Active</div>
+                </div>
             </div>
-            <div class="card hardest">
-                <h3>Vol 3: Hardest Concepts</h3>
-                <p><strong>Target:</strong> Advanced mastery.</p>
-                <p>Unpacks metric space completeness, structural Lebesgue integration, \(L^p\) topologies, and functional analysis extensions.</p>
-            </div>
+
         </div>
 
-        <h2 style="margin-top: 4rem;">The 4-Step Rhythm Example</h2>
-        <p>Every concept in the series follows an identical logical rhythm so your brain builds familiarity across the syllabus:</p>
-
-        <div class="framework-section wall">
-            <div class="framework-title">Step 1 — The Wall</div>
-            The foundational definition of the supremum \(\sup A\) sounds like a complex legal clause. Why must we assume its existence, and what collapses without it?
+        <!-- Centralized Professor Verification Request Panel -->
+        <div class="professor-panel">
+            <h2>University Faculty & Coordinator Outreach</h2>
+            <p>We provide verified academic department coordinates, lecturers, and course directors with direct evaluation review modules to assist with syllabus integration choices and lower module failure rates.</p>
+            <a href="mailto:contact@://gentlyexplained.com Copy Verification Request" class="btn-main">Request Academic Evaluation Copies</a>
         </div>
 
-        <div class="framework-section intuition">
-            <div class="framework-title">Step 2 — The Intuition</div>
-            Picture the number line as a ruler. The fractions are packed densely but leave microscopic gaps where irrationals like \(\sqrt{2}\) belong. The completeness axiom states that there are no holes; if numbers creep toward a ceiling, they must stop at an exact coordinate point.
-        </div>
-
-        <div class="framework-section breakdown">
-            <div class="framework-title">Step 3 — The Breakdown</div>
-            Let \(A \subset \mathbb{R}\) be a nonempty set bounded above. The supremum \(\sup A\) is characterized strictly by two tracking rules:
-            <div style="margin-top: 0.5rem;">1. \(a \le \sup A\) for all \(a \in A\)</div>
-            <div>2. If \(M < \sup A\), then some \(a \in A\) satisfies \(a > M\)</div>
-        </div>
-
-        <div class="framework-section shortcut">
-            <div class="framework-title">Step 4 — The Shortcut</div>
-            <strong>Key Memory Hook:</strong> Real numbers fill every structural gap that rational fractions leave behind.
-        </div>
-
-        <div class="cta-box">
-            <h3>Request an Evaluation Copy</h3>
-            <p>Are you a university professor, lecturer, or course coordinator looking to lower your module's DFW rate? Access print-on-demand sample chapters for your syllabus review completely for free.</p>
-            <!-- Replace the href string with your real contact or form link later -->
-            <a href="mailto:your-email@://domain.com Copy Request" class="btn">Email for Review Access</a>
-        </div>
     </div>
 
+    <script>
+        function filterCatalog(discipline) {
+            // Update active state class on filter control toggles
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            // Handle row visibility shifts
+            const rows = document.querySelectorAll('.book-row');
+            rows.forEach(row => {
+                if (discipline === 'all' || row.getAttribute('data-discipline') === discipline) {
+                    row.style.display = 'grid';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        }
+    </script>
 </body>
 </html>
