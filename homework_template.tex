@@ -1,0 +1,54 @@
+% --- Open-Source Homework Template by Gently Explained ---
+% Live Preview & Textbooks at https://github.io
+% ---------------------------------------------------------
+\documentclass[11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath, amsfonts, amssymb, amsthm}
+\usepackage{mathtools}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+
+% Brand Accent Colors
+\definecolor{academicblue}{HTML}{1A365D}
+\definecolor{accentteal}{HTML}{007791}
+
+% Page Header/Footer Formatting
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\color{gray}Real Analysis Assignment}
+\lhead{\color{academicblue}\bfseries Gently Explained Framework}
+\cfoot{\thepage}
+
+% Custom Assignment Problem Environment
+\newenvironment{problem}[2]{%
+    \vspace{1.5em}
+    \noindent\textbf{\color{academicblue}Problem #1:} \textit{#2}\par\medskip
+    \hrule\vspace{0.5em}
+}{%
+    \vspace{1.5em}
+}
+
+\begin{document}
+
+\thispagestyle{plain}
+\begin{center}
+    {\LARGE \bfseries \color{academicblue} Course Assignment Module} \\
+    \vspace{0.5em}
+    {\large Student Name: \underline{\hspace{5cm}}} \quad Date: \underline{\hspace{3cm}}
+\end{center}
+\vspace{1.5em}
+
+\begin{problem}{1}{Let $A \subset \mathbb{R}$ be nonempty and bounded above. Prove that if $M$ is an upper bound of $A$ and $M \in A$, then $M = \sup A$.}
+\begin{proof}
+    Suppose $M$ is an upper bound of $A$ and $M \in A$. 
+    By definition of an upper bound, $a \le M$ for all $a \in A$.
+    Now let $M'$ be any arbitrary upper bound of $A$. 
+    Since $M \in A$, it must follow by definition that $M \le M'$.
+    Thus, $M$ is less than or equal to every other upper bound, making it the least upper bound.
+    Therefore, $M = \sup A$.
+\end{proof}
+\end{problem}
+
+\end{document}
